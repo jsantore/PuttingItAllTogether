@@ -7,7 +7,8 @@ module bsu.comp152.puttingitalltogether {
     requires org.kordamp.bootstrapfx.core;
     requires java.net.http;
     requires com.fasterxml.jackson.annotation;
+    requires com.fasterxml.jackson.databind;
 
-    opens bsu.comp152.puttingitalltogether to javafx.fxml;
+    opens bsu.comp152.puttingitalltogether to javafx.fxml, com.fasterxml.jackson.databind;
     exports bsu.comp152.puttingitalltogether;
 }
