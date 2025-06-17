@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.puttingitalltogether.MainWindowContoller">
+   <children>
+      <SplitPane dividerPositions="0.1884422110552764" layoutY="-2.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="601.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox layoutX="2.0" prefHeight="72.0" prefWidth="599.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#quitButtonClick" text="Quit" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ListView fx:id="displayList" layoutX="7.0" prefHeight="320.0" prefWidth="590.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
