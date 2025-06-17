@@ -16,6 +16,7 @@ public class Main extends Application {
             e.printStackTrace();
             System.exit(1);
         }
+        stage.setTitle("University Data");
         stage.setScene(windowPane);
         stage.show();
     }
