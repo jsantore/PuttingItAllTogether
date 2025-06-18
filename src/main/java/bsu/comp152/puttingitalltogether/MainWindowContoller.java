@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 
 import java.net.URL;
@@ -17,6 +18,11 @@ public class MainWindowContoller implements Initializable {
     private DataModel dataModel;
     @FXML
     private ListView<DataModel.UniversityData> displayList;
+
+    @FXML
+    private TextField websiteBox;
+    @FXML
+    private TextField codeBox;
 
     @FXML
     protected void quitButtonClick() {
@@ -36,11 +42,8 @@ public class MainWindowContoller implements Initializable {
                     public void changed(ObservableValue<? extends DataModel.UniversityData> observableValue,
                                         DataModel.UniversityData oldselection,
                                         DataModel.UniversityData newselection) {
-                        var moreInfo = new Alert(Alert.AlertType.INFORMATION);
-                        moreInfo.setTitle("Information for "+newselection.getName());
-                        moreInfo.setHeaderText(newselection.getCountry() + " "+ newselection.getAlphaTwoCode());
-                        moreInfo.setContentText("First Web Page: "+newselection.getFirstWebPage());
-                        moreInfo.showAndWait();
+                        codeBox.setText(newselection.getAlphaTwoCode());
+                        websiteBox.setText(newselection.getFirstWebPage());
                     }
                 }
         );
