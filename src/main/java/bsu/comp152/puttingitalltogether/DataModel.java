@@ -81,6 +81,13 @@ public class DataModel {
                 return "";
             }
         }
+        public String getFirstDomain() {
+            if (domains.size() > 0) {
+                return domains.get(0);
+            } else {
+                return "";
+            }
+        }
 
 
 
