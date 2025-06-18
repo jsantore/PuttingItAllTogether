@@ -48,7 +48,7 @@ public class DataModel {
         return universityData;
     }
 
-    class UniversityData {
+    static class UniversityData {
         @JsonProperty("state-province")
         private String stateProvince;
         @JsonProperty("name")
@@ -62,16 +62,31 @@ public class DataModel {
         @JsonProperty("country")
         private String country;
 
+        public String getName() {
+            return name;
+        }
+        public String getCountry() {
+            return country;
+        }
+        public String getStateProvince() {
+            return stateProvince;
+        }
+        public String getAlphaTwoCode() {
+            return alphaTwoCode;
+        }
+        public String getFirstWebPage() {
+            if (webPages.size() > 0) {
+                return webPages.get(0);
+            } else {
+                return "";
+            }
+        }
+
+
+
         @Override
         public String toString() {
-            return "University{" +
-                    "stateProvince='" + stateProvince + '\'' +
-                    ", name='" + name + '\'' +
-                    ", alphaTwoCode='" + alphaTwoCode + '\'' +
-                    ", webPages=" + webPages +
-                    ", domains=" + domains +
-                    ", country='" + country + '\'' +
-                    '}';
+            return name + " " + country;
         }
     }
 }
