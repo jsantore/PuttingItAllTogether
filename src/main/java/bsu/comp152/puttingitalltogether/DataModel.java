@@ -74,12 +74,18 @@ public class DataModel {
         public String getAlphaTwoCode() {
             return alphaTwoCode;
         }
+        public String getStateProvince(){
+            return stateProvince;
+        }
         public String getFirstWebPage() {
             if (webPages.size() > 0) {
                 return webPages.get(0);
             } else {
                 return "";
             }
+        }
+        public List<String> getDomains(){
+            return domains;
         }
 
         public String getFirstDomain() {
