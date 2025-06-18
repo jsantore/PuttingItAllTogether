@@ -92,7 +92,7 @@ public class DataModel {
             if (domains.size() > 0) {
                 return domains.get(0);
             } else {
-                return "";
+                return "No Domain";
             }
         }
 
