@@ -42,6 +42,7 @@ public class MainWindowContoller implements Initializable {
                     public void changed(ObservableValue<? extends DataModel.UniversityData> observableValue,
                                         DataModel.UniversityData oldselection,
                                         DataModel.UniversityData newselection) {
+                        //this updates the text boxes on the gui with new data
                         codeBox.setText(newselection.getAlphaTwoCode());
                         websiteBox.setText(newselection.getFirstWebPage());
                     }
